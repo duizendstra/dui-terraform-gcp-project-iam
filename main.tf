@@ -59,10 +59,10 @@ locals {
   grouped_iam_info = {
     for info in local.combined_iam_info :
     "${info.email}-${info.role}" => {
-      id      = info.id
-      email   = info.email
-      role    = info.role
-      project_id = coalesce(info.project_id, var.project.project_id)
+      id             = info.id
+      email          = info.email
+      role           = info.role
+      project_id     = coalesce(info.project_id, var.project.project_id)
       project_number = coalesce(info.project_number, var.project.project_number)
     }
   }
