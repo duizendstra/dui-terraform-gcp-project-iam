@@ -30,7 +30,7 @@ No modules.
 | <a name="input_iam_members"></a> [iam\_members](#input\_iam\_members) | A list of members and their IAM roles. | <pre>list(object({<br>    id     = string<br>    member = string<br>    roles  = list(string)<br>  }))</pre> | `[]` | no |
 | <a name="input_iam_service_accounts"></a> [iam\_service\_accounts](#input\_iam\_service\_accounts) | A list of service accounts and their IAM roles. | <pre>list(object({<br>    id                          = string<br>    service_account_description = string<br>    roles                       = list(string)<br>    project_id                  = optional(string)<br>  }))</pre> | `[]` | no |
 | <a name="input_iam_service_agents"></a> [iam\_service\_agents](#input\_iam\_service\_agents) | A list of service agents and their IAM roles. | <pre>list(object({<br>    id             = string<br>    service        = string<br>    roles          = list(string)<br>    project_number = optional(string)<br>  }))</pre> | `[]` | no |
-| <a name="input_is_authoritative"></a> [is\_authoritative](#input\_is\_authoritative) | Indicates whether the IAM policies should be authoritative. Defaults to true. | `bool` | `true` | no |
+| <a name="input_is_authoritative"></a> [is\_authoritative](#input\_is\_authoritative) | Indicates whether the IAM policies should be authoritative. Defaults to true. | `bool` | `false` | no |
 | <a name="input_project"></a> [project](#input\_project) | The project object containing the project ID and project number. | <pre>object({<br>    project_id     = string<br>    project_number = string<br>  })</pre> | n/a | yes |
 
 ## Outputs
