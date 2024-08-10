@@ -16,27 +16,20 @@ module "project_iam" {
   source = "./.."
 
   project = {
-    # project_id     = "your-project-id"
-    # project_number = "your-project-number"
-    project_id     = "dui-module-test-de27"
-    project_number = "11"
+    project_id     = "your-project-id"
+    project_number = "your-project-number"
   }
 
   iam_members = [
-    # {
-    #   id     = "user1"
-    #   member = "user:user1@example.com"
-    #   roles  = ["roles/logging.logWriter", "roles/bigquery.admin", "roles/viewer", ]
-    # },
-    # {
-    #   id     = "user2"
-    #   member = "user:user2@example.com"
-    #   roles  = ["roles/logging.logWriter", "roles/bigquery.admin", "roles/viewer"]
-    # }
     {
       id     = "user1"
-      member = "user:jasperduizendstra@gmail.com"
+      member = "user:user1@example.com"
       roles  = ["roles/logging.logWriter", "roles/bigquery.admin", "roles/viewer", ]
+    },
+    {
+      id     = "user2"
+      member = "user:user2@example.com"
+      roles  = ["roles/logging.logWriter", "roles/bigquery.admin", "roles/viewer"]
     }
   ]
 }
