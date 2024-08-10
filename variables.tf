@@ -13,7 +13,7 @@ variable "project" {
 variable "is_authoritative" {
   description = "Indicates whether the IAM policies should be authoritative. Defaults to true."
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "iam_members" {
