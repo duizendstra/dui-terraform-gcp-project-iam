@@ -1,5 +1,5 @@
 output "iam" {
-  description = "The IAM members and their roles grouped by id"
+  description = "The IAM members and their roles grouped by id. This output contains information such as the email, project ID, project number, the roles assigned to the member, related IAM resource details like etag and condition, and the project details."
   value = {
     iam = {
       for id in distinct([for info in local.combined_iam_info : info.id]) :
@@ -25,23 +25,7 @@ output "iam" {
   }
 }
 
-# Documentation of the "iam" Output:
-#
-# The `iam` output provides a map of IAM members and their roles, grouped by a unique `id`.
-#
-# Structure of the `iam` output:
-# - `id`: The unique identifier for each IAM member.
-# - `email`: The email associated with the IAM member.
-# - `member`: The full IAM member string, which includes a prefix like `user:` or `serviceAccount:`.
-# - `project_id`: The ID of the project to which the IAM roles are applied.
-# - `project_number`: The project number associated with the member.
-# - `resource`: A list of resources corresponding to the IAM roles, each containing:
-#   - `member`: The IAM member string.
-#   - `project`: The project ID where the IAM role is applied.
-#   - `etag`: The etag for the IAM policy binding, used for optimistic concurrency control.
-#   - `condition`: Any conditions associated with the IAM role, if present.
-# - `roles`: A list of IAM roles assigned to the member.
-#
-# The `project` output returns the project object, containing:
-# - `project_id`: The ID of the project.
-# - `project_number`: The project number.
+output "project" {
+  description = "The project details including project ID and project number."
+  value       = var.project
+}

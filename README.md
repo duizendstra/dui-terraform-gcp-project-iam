@@ -37,5 +37,6 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_iam"></a> [iam](#output\_iam) | The IAM members and their roles grouped by id |
+| <a name="output_iam"></a> [iam](#output\_iam) | The IAM members and their roles grouped by id. This output contains information such as the email, project ID, project number, the roles assigned to the member, related IAM resource details like etag and condition, and the project details. |
+| <a name="output_project"></a> [project](#output\_project) | The project details including project ID and project number. |
 <!-- END_TF_DOCS -->
